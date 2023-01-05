@@ -14,34 +14,46 @@ int main()
         scanf("%d", &x);
         n[j]=x;
         i++;
-        z = grade(x);
+        z = grade(x,j);
     }
     print();
 }
-grade(int j)
+grade(int j,int q)
 {
     int x, z;
-    if (j < 50)
+    if (j < 50)     // D 0-49
     {
         c[i] = m[4];
     }
-    else if (j <= 59)
+    else if (j <= 59)// D 50-59
     {
         c[i] = m[3];
     }
-    else if (j <= 69)
+    else if (j <= 69)// C 60-69
     {
         c[i] = m[2];
     }
-    else if (j <= 79)
+    else if (j <= 79)// B 70-79
     {
         c[i] = m[1];
     }
-    else if (j<=100)
+    else if (j<=100)// A 80-100
     {
         c[i] = m[0];
+    }else{
+        x=error(q);
     }
     return (z);
+}
+error(int q)
+{
+    int j, z, e;
+    printf("Error\n");
+    printf("Input Score [%d] : ", q);
+    scanf("%d", &j);
+    n[q]=j;
+    z = grade(j,q);
+    return (e);
 }
 line()
 {
