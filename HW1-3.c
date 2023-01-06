@@ -4,7 +4,6 @@ char m[5] = {'A', 'B', 'C', 'D', 'E'};
 char c[5];
 int n[5];
 int i = -1;
-
 int main()
 {
     int  x,z;
@@ -40,7 +39,7 @@ grade(int j,int q)
     else if (j<=100)// A 80-100
     {
         c[i] = m[0];
-    }else{
+    }else {
         x=error(q);
     }
     return (z);
