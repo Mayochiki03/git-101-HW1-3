@@ -1,14 +1,14 @@
-#include <stdio.h>          
-int input,s,i=0;   
-char data[11];         
+#include <stdio.h>
+int input, s, i = 0, h;
+char data[11];
 int main()
 {
     printf("** Main Menu for 10 data **\n1. Input Data\n2. Search Data\n3. Edit Data\n4. Show All Data\n5. Show Max Data\n6. Show Min Data\n7. Exit\nSelect Menu : ");
     scanf("%d", &input);
-    s=scase(input);
+    s = scase(input);
 }
 scase()
-{                                       
+{
     switch (input)
     {
     case 1:
@@ -16,14 +16,27 @@ scase()
         line();
         do
         {
-            printf("Enter Number[%d] : ",i);
-            scanf("%d",&data);
+            printf("Enter Number[%d] : ", i);
+            scanf("%d", &data);
             i++;
-        } while (i!=10);
+        } while (i != 10);
         break;
     case 2:
-    printf("*** search Data ***\n");
-        printf("");
+        data[0] = 22;
+        data[1] = 83;
+        data[2] = 87;
+        data[3] = 66;
+        data[4] = 88;
+        printf("*** search Data ***\nEnter Data :");
+        scanf("%d", &h);
+            if (data[i] != h)
+            {
+                i++;
+            }
+            else{
+                printf("Position Data >> [%d]", i);
+            }
+
         break;
     case 3:
         /* code */
@@ -41,11 +54,11 @@ scase()
         /* code */
         break;
     default:
-       // printf("Hello wold");
+        // printf("Hello wold");
         break;
     }
 }
-line(){
- printf("===================\n");
-
+line()
+{
+    printf("===================\n");
 }
