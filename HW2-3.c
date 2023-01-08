@@ -1,40 +1,44 @@
 #include <stdio.h>
-int first,last, e, i = 0,t,c,a,g;
-int h[100];
+int e, i = 0, t, c,l;
+int h[10000];
+int sum1, sum2, a;
 int main()
 {
-    printf("Enter First number :");
+    int first, last;
+    print1();
     scanf("%d", &first);
-    printf("Enter last number :");
+    print2();
     scanf("%d", &last);
-    a=sum();
-    printf("%d",c);
-
+    iscan(first, last);
+    a = sum();
 }
-/*print()
+print1()
 {
     printf("Enter First number :");
-    printf("\n");
-    printf("Enter last number :");
-
 }
-iscan()
+print2()
 {
-    scanf("%d", &first);
-    i++;
-    scanf("%d", &last);
-}*/
-sum(){
-    e=last-first;
-    t=first;
-    h[i]=first;
+    printf("Enter last number :");
+}
+iscan(int first, int last)//convert data
+{
+    e = last - first;
+    c=first;
+    l=last;
+    t = first;
+    h[i] = first;
+}
+sum()//calculate
+{
     do
     {
         i++;
-        t=t+1;//21
-        h[i]=t;
-    } while (i!=e);
-
-    return(a);
-
+        t = t + 1; 
+        sum2 = t + c;
+        h[i] = h[i] + sum2;
+        sum1 = sum1 + h[i] - c;
+    } while (i != e);
+    sum1 = sum1 + c;
+    printf("SUM of %d-%d :%d",c,l, sum1);
+    return (a);
 }
