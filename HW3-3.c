@@ -123,7 +123,6 @@ case5()
         {
             max = data[i];
             n=i;
-
         }
     }
     printf("Maximum Position >> \t  %d\nMaximum Data >>\t\t  %d\n",n, max);
