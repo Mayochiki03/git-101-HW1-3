@@ -69,7 +69,8 @@ case1()
 {
     printf("*** Input Data ***\n");
     line();
-    for (int i = 0; i <= 9; i++)
+    int i;
+    for (i = 0; i <= 9; i++)
     {
         printf("Enter Number [%d]:", i);
         scanf("%d", &data[i]);
@@ -107,7 +108,8 @@ case4()
     printf("*** Show All Data ***\n");
     line();
     printf("Number\t\tData\n");
-    for (int i = 0; i <= 9; i++)
+    int i;
+    for (i = 0; i <= 9; i++)
     {
         printf("[%d]\t\t%d\n", i, data[i]);
     }
@@ -117,7 +119,8 @@ case5()
     printf("** Show Max Data **\n");
     line();
     max = data[0];
-    for (int i = 0; i <= 9; i++)
+    int i;
+    for (i = 0; i <= 9; i++)
     {
         if (data[i] >= max)
         {
@@ -132,7 +135,8 @@ case6()
     printf("** Show Min Data **\n");
     line();
        min = data[0];
-    for(int i=0; i<=9; i++)
+       int i;
+    for(i=0; i<=9; i++)
     {
         if(data[i] <= min)
         {
